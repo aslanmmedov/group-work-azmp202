@@ -1,3 +1,4 @@
+
 .sec-main{
     background-color: $bgc-secondary;
     padding: 60px;
@@ -64,3 +65,59 @@
         }
     }
 }
+
+#aboutbanner {
+    background-color: $bg-color1;
+
+    .banner {
+        @include FlexBox;
+        flex-direction: column;
+        gap: 20px;
+        padding: 4rem 1.5rem;
+        text-align: center;
+
+        h1 {
+            letter-spacing: 3px;
+
+            @include for_phone_only {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
+
+#photoandtext-photo {
+    background-color: $bg-color2;
+
+    .row {
+        justify-content: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#photoandtext-text {
+    background-color: $bg-color2;
+
+    .row {
+        justify-content: center;
+
+        .col-6 {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            h5 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+
+
+
+}
+
+
