@@ -19,9 +19,9 @@
                 gap: 40px;
                 border: solid 1px #F3D1BF;
                 align-items: center;
-                max-width: 586px;
+                width: 100%;
                 padding: 30px;
-                .apr-h3{
+                .par-h3{
                     max-width: 100%;
                 }
                 .icon{
@@ -32,6 +32,12 @@
                     img{
                         margin-left: 31px;
                         margin-top: 31px;
+                        
+                    }
+                    @include for-phone-only{
+                        width: 82px;
+                        height: 82px;
+                       
                     }
                 }
             }
