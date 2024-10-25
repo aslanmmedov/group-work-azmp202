@@ -1,36 +1,54 @@
 #footer{
-    background-color:$bgc-secondary;
     padding-top:5rem;
-    .footer-content{
-        .flex-direct-footer{
+    #footer-card{
+        background-color:$dark-bgc-secondary;
+    }
+    #footer-line{
+        background-color:$bgc-main;
+    }
+    #partners{
+        background-color:$bgc-secondary;
+        .partner-imgs{
+            @include FlexBox();
+            justify-content: space-between;
+            padding:3rem 0;
             @include for-phone-only{
-                flex-direction: column-reverse;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap:1rem;
             }
-            
         }
+       
+    }
+    .footer-content{
         .hero-banner{
-            background-color:$main-btn-color;
+            background-color:$dark-bgc-secondary;
         }
         .banner-content{
-            margin-top:4rem;
             padding-left:4rem;
-            padding-top:3rem;
+            padding-top:4rem;
+            margin-bottom:2rem;
+            position:relative;
+            img{
+                position:absolute;
+                top:-5rem;
+                left:4rem;
+                width:30%;
+            }
             @include for-phone-only{
                 margin-top:0;
+                padding-left:1rem;
             }
             @include FlexBox();
             flex-direction:column;
             align-items:flex-start;
             gap:1.5rem;
-            
-            h1{
-                color:$white;
-                width:80%;
+            h5{
+                color:$main-btn-color;
             }
-            p{
-                color:$white;
-                opacity:0.6;
-                width:75%;
+            h3{
+                color:$second-header-color;
+                width:100%;
             }
             button{
                 @extend %primary-button;
@@ -38,35 +56,59 @@
             }
             .contact-us{
                 margin-top:2rem;
-                background-color:$white;
+                background-color:$main-btn-color;
                 border-color:transparent;
-                color:$second-header-color;
+                color:$white;
                 font-weight: 700;
                 &:hover{
-                    border-color:$white;
+                    background-color:$white;
                     color:$main-btn-color;   
                 }
             }
+            
+        }
+        .text{
+            margin-top:2rem;
+            margin-left:2rem;
+            padding-top:6rem;
+            p{
+                font-size: 19px;
+            }
+            @include for-phone-only{
+                margin-top:0;
+                margin-left:1rem;
+                padding-top:1rem;
+            }
+            
         }
         .hero-img{
-            margin-top:4rem;
+            margin-top:2rem;
             padding-right:4rem;
             img{
                 width:90%;
+                @include for-phone-only{
+                    width:100%;
+                }
             }
+            @include for-phone-only{
+                padding:0 3rem;
+                width:100%;
+            }
+            
         }
 
 
         .footer-line{
             border-bottom: 2px solid $main-btn-color;
-            margin-top:5rem;
+            padding-top:4rem;
+            // margin-top:4rem;
             margin-bottom: 3rem;
             @include for-phone-only{
                 text-align: center;
             }
             .col-3{
                 h3{
-                    color:$second-header-color;
+                    color:$white;
                 }
                 h4{
                     margin-top:15px;
@@ -86,7 +128,7 @@
                     gap:0.8rem;
                     li{
                         font-size:16px;
-                        color:$second-header-color;
+                        color:$white;
                     }
                 }
                 .incs{
@@ -104,8 +146,10 @@
         }
         .footer-end{
             @include FlexBox();
+            padding-bottom:2rem;
             p{
                 opacity: 0.6;
+                color:$white;
             }
             @include for-phone-only{
                 text-align: center;
@@ -114,7 +158,7 @@
                 @include FlexBox;
                 gap:4rem;
                 a{
-                    color:$second-header-color;
+                    color:$white;
                     font-size: 1rem;
                     opacity: 1;
                 }
