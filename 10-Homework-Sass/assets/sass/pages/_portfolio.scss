@@ -1,0 +1,162 @@
+#navbar {
+    background-color: $bgc-main;
+
+    .navbar {
+        height: 85px;
+        @include FlexBox();
+
+        ul {
+            @include FlexBox();
+            gap: 4rem;
+
+            li {
+                a {
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+
+            @include for-phone-only {
+                display: none;
+            }
+        }
+
+        @include for-phone-only {
+            padding: 0 2rem;
+        }
+
+        button {
+            @extend %primary-button;
+            background-color: transparent;
+            border-color: $page-gray;
+            color: $white;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: $page-gray;
+                color: $bgc-main;
+            }
+
+            @include for-phone-only {
+                display: none;
+            }
+        }
+
+        .menu {
+            display: none;
+
+            img {
+                display: none;
+
+                @include for-phone-only {
+                    display: block;
+
+                }
+            }
+
+            @include for-phone-only {
+                display: block;
+
+            }
+
+        }
+    }
+
+}
+
+#head {
+    background-color: $bgc-main;
+
+    .portfolio-head {
+        @include FlexBox();
+        flex-direction: column;
+        padding: 6rem 0;
+        color: $white;
+        text-align: center;
+        gap: 2rem;
+
+        p {
+            line-height: 2rem;
+            width: 40%;
+            opacity: 0.6;
+        }
+    }
+}
+
+#portfolio-main {
+    background-color:$bgc-secondary;
+    .shortcuts {
+        .short-head {
+            padding-top:4rem;
+            ul{
+                
+                @include FlexBox();
+                justify-content: center;
+                @include for-phone-only{
+                    flex-wrap: wrap;
+                }
+                gap:2rem;
+                margin-bottom:3rem;
+                .ad{
+                    opacity: 1;
+                }
+                a{
+                    color:$second-header-color;
+                    font-size: 1.4rem;
+                    opacity: 0.6;
+                }
+                
+            }
+        }
+
+    }
+    #portfolio-imgs{
+        .portfolio-imgs{
+            position:relative;
+            h2{
+                color:$white;
+                margin-top:1rem;
+            }
+            span{
+                color:$second-header-color;
+                background-color:$white;
+                border-radius:17px; 
+                padding:10px 7px;
+                font-size: 1.1rem;
+            }
+            img{
+                width:100%;
+            }
+            .door-img{
+                position:absolute;
+                left:40px;
+                bottom:40px;
+            }
+        }
+        .pages{
+            ul{
+                @include FlexBox();
+                justify-content: center;
+                gap:40px;
+                margin-top:4rem;
+                @include for-phone-only{
+                    gap:3%;
+                }
+                li{
+                    color:$second-header-color;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    background-color: $white;
+                    padding:0.8rem 1.2rem;
+                    border-radius: 8px;
+                    
+                }
+                #differ{
+                    background-color:$main-btn-color;
+                    color:$white;
+                }
+            }
+        }
+    }
+}
