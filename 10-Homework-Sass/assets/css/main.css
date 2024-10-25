@@ -783,6 +783,72 @@ a {
 }
 
 
+.sec-main {
+  background-color: #fdf0e9;
+  padding: 60px;
+}
+.sec-main .container .percantage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+@media (max-width: 728px) {
+  .sec-main .container .percantage {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+.sec-main .container .percantage .per1 {
+  display: flex;
+  gap: 40px;
+  border: solid 1px #F3D1BF;
+  align-items: center;
+  max-width: 586px;
+  padding: 30px;
+}
+.sec-main .container .percantage .per1 .apr-h3 {
+  max-width: 100%;
+}
+.sec-main .container .percantage .per1 .icon {
+  background-color: #ef6d58;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+}
+.sec-main .container .percantage .per1 .icon img {
+  margin-left: 31px;
+  margin-top: 31px;
+}
+.sec-main .container .gratest-value {
+  max-width: 570px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.sec-main .container .gratest-value h5 {
+  color: #ef6d58;
+}
+.sec-main .container .gratest-value h3 {
+  color: #391400;
+}
+.sec-main .container .gratest-value p {
+  color: rgba(57, 20, 0, 0.6392156863);
+}
+.sec-main .container .gratest-value .pos-img {
+  position: relative;
+}
+.sec-main .container .gratest-value .pos-img img {
+  width: 100%;
+}
+.sec-main .container .gratest-value .pos-img .pos-img2 {
+  position: absolute;
+  top: calc(50% - 74px);
+  right: calc(50% - 74px);
+}/*# sourceMappingURL=main.css.map */
+
+
 #aboutbanner {
   background-color: #28293e;
 }
@@ -828,3 +894,4 @@ a {
 #photoandtext-text .row .col-6 h5 {
   font-size: 2rem;
 }
+
